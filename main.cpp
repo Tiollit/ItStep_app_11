@@ -5,7 +5,7 @@ using namespace std;
 
 void main ()
 {
-	int k;
+	int k, n;
 	bool triger = true, inf = true, fni = true;
 	Student *obj = new Student[5];
 	for (size_t i = 0; i < 5; i++)
@@ -50,7 +50,7 @@ void main ()
 		{
 			while (inf = true)
 			{
-				cout << "Use numbers for navigation: " << endl;
+				cout << "Insert number of a student and use numbers for navigation: " << endl;
 				cout << "1 - First and Second name" << endl;
 				cout << "2 - Date of birth" << endl;
 				cout << "3 - phone number" << endl;
@@ -59,7 +59,7 @@ void main ()
 				cout << "6 - place of studying" << endl;
 				cout << "7 - groupe" << endl;
 				cout << "0 - go to previous menu" << endl;
-				cin >> k;
+				cin >> n >> k;
 				switch (k)
 				{
 				case 0:
@@ -67,38 +67,38 @@ void main ()
 					break;
 				case 1:
 					cout << "Insert First and Second name of a student: " << endl;
-					getline(cin, PIB);
+					getline(cin, obj[n].PIB);
 					break;
 				case 2:
 					cout << "Insert date of birth of a student: " << endl;
-					getline(cin, date);
+					getline(cin, obj[n].date);
 					break;
 				case 3:
 					cout << "Insert phone number of a student: " << endl;
-					getline(cin, phone);
+					cout << "Sorry, this information is unavailable for public use" << endl;
 					break;
 				case 4:
 					cout << "Insert coutry  of living of a student: " << endl;
-					getline(cin, country);
+					getline(cin, obj[n].country);
 					break;
 				case 5:
 					cout << "Insert town of living of a student: " << endl;
-					getline(cin, town);
+					cout << "Sorry, this information is unavailable for public use" << endl;
 					break;
 				case 6:
 					cout << "Insert place of studying of a student: " << endl;
-					getline(cin, study);
+					getline(cin, obj[n].study);
 					break;
 				case 7:
 					cout << "Insert groupe of a student: " << endl;
-					getline(groupe);
+					getline(cin, obj[n].groupe);
 					break;
 				}
 			}
-			
+
 		}
 		else if (k == 2)
-		{			
+		{
 			while (fni = true)
 			{
 				cout << "Choose the number of student you want to see or press 0 to return to main menu:" << endl;
@@ -106,20 +106,16 @@ void main ()
 				if (k == 0) fni = false;
 				else
 				{
-					cout << Student[i].PIB << " ";
-					cout << Student[i].date << " ";
-					cout << Student[i].phone << " ";
-					cout << Student[i].country << " ";
-					cout << Student[i].town << " ";
-					cout << Student[i].study << " ";
-					cout << Student[i].groupe << endl;
+					cout << obj[k].get_PIB() << " ";
+					cout << obj[k].get_date() << " ";
+					cout << obj[k].get_phone() << " ";
+					cout << obj[k].get_country() << " ";
+					cout << obj[k].get_town() << " ";
+					cout << obj[k].get_study() << " ";
+					cout << obj[k].get_groupe() << endl;
 				}
 			}
 		}
-			
+		else break;
 	}
-		
-
-		
-	return 0;
 }
