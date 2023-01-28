@@ -10,6 +10,7 @@ void main ()
 	Student *obj = new Student[5];
 	for (size_t i = 0; i < 5; i++)
 	{
+		cout << "Student # " << i + 1 << endl;
 		string PIB;
 		cout << "PIB->";
 		getline(cin, PIB);
@@ -42,7 +43,8 @@ void main ()
 
 	while (triger = true)
 	{
-		cout << "Welcome to class \"Student\". To insert or change information about students press 1." << endl;
+		cout << "Welcome to class \"Student\"." << endl;
+		cout << "To insert or change information about students press 1." << endl;
 		cout << "To show public information about students press 2." << endl;
 		cout << "TO end the work of a programm press 0" << endl;
 		cin >> k;
@@ -59,7 +61,9 @@ void main ()
 				cout << "6 - place of studying" << endl;
 				cout << "7 - groupe" << endl;
 				cout << "0 - go to previous menu" << endl;
+				cin.ignore();
 				cin >> n >> k;
+				cin.ignore();
 				switch (k)
 				{
 				case 0:
