@@ -2,10 +2,10 @@
 using namespace std;
 class Student {
 private:
-    string Student;
+    string phone, town;
 public:
     int date;
-    string PIB, phone, town, country, study, groupe;
+    string PIB, country, study, groupe;
     Student();
     Test(int age);
     Test(string text, int age);
