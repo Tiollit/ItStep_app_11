@@ -1,4 +1,6 @@
-#include "Test.h"Test::Test()
+#include "Test.h"
+
+Test::Test()
 {
     cout << "Constructor!" << endl;
     text = "Default";
