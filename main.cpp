@@ -47,7 +47,8 @@ void main ()
 		cout << "To insert or change information about students press 1." << endl;
 		cout << "To show public information about students press 2." << endl;
 		cout << "TO end the work of a programm press 0" << endl;
-		cin >> k;
+		cin.ignore();
+		cin >> k;		
 		if (k == 1)
 		{
 			while (inf = true)
@@ -106,7 +107,9 @@ void main ()
 			while (fni = true)
 			{
 				cout << "Choose the number of student you want to see or press 0 to return to main menu:" << endl;
+				cin.ignore();
 				cin >> k;
+				cin.ignore();
 				if (k == 0) fni = false;
 				else
 				{
